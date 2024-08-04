@@ -50,15 +50,17 @@ const ClientSlider = () => {
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
-        // autoPlay={true}
-        // autoPlaySpeed={1000}
+        autoPlay={false}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={['tablet', 'mobile']}
+        // Do not remove arrows on mobile
+        removeArrowOnDeviceType={[]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
+        renderButtonGroupOutside={true}
+        arrows={true} // Ensure arrows are enabled
       >
         {clients.map((client) => (
           <div className="client-logo-container" key={client.id}>
