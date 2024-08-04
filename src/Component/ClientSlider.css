@@ -1,26 +1,101 @@
 .client-slider-container {
-    padding: 20px;
-    font-family: 'Avenir LT Std', sans-serif;
+  padding: 20px;
+  font-family: 'Avenir LT Std', sans-serif;
+  overflow: hidden;
 }
-  
+
 .client-slider-container h2 {
-    color: white;
-    margin-bottom: 20px;
+  color: white;
+  margin-bottom: 20px;
 }
-  
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
 .client-logo-container {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    padding: 20px;
-    margin: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 20px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
 }
-  
+
 .client-logo {
+  max-width: 100px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .client-logo-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .client-logo {
+    max-width: 80px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-logo-container {
+    width: 120px;
+    height: 120px;
+
+  }
+  
+  .client-logo {
+    max-width: 70px;
+    height: 70px;
+    width: 70px;
+  }
+  .client-slider-container{
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-slider-container{
+    padding: 0px;
+  }
+  .client-logo-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .client-logo {
     max-width: 100px;
-    height: auto;
-    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  color: #ccc;
 }
