@@ -1,7 +1,7 @@
 .HomeService {
   background-color: rgb(37, 37, 37);
   color: white;
-  padding: 20px;
+
   background-image: url('/public/back_service.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -220,24 +220,33 @@ font-size: 25rem;
 }
 }
 
-/* Small devices (phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .first_div,
-  .second_div {
-    flex-direction: column;
-  
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .HomeService {
+    padding: 10px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-  .image_gradint{
+
+  .first_div, .second_div {
     flex-direction: column;
+    margin: 2rem 0; /* Reduced margin to avoid overflow */
+  }
+
+  .responsive-img-container img {
     width: 100%;
-   padding: 20px;
+    height: auto;
   }
-  .number_content{
+
+  .number_content, .second_div_number_content {
     width: 100%;
     margin-top: 2rem;
-    padding: 20px;
-   
   }
+
+  .gradint_fam_1, .gradint_fam {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .gradint_line {
     width: 5px;
     height: 100px;
@@ -249,67 +258,59 @@ font-size: 25rem;
       rgba(0, 214, 204, 1)
     );
   }
-  .gradint_fam_1 {
-    display: flex;
-    flex-direction: column;
-     justify-content: center;
-    align-items: center; 
-   
-  }
-  .gradint_fam {
-  
-    flex-direction: column;
-  }
-  .number{
-  
-  font-size: 27rem;
 
+  .number {
+    font-size: 20rem; /* Adjusted font size to prevent overflow */
+    left: -3%; /* Ensures the number stays within the viewport */
   }
-  .second_div{
-    flex-direction: column;
+
+  .second_number {
+    font-size: 20rem; /* Adjusted font size */
+    left: 40%;
   }
-  .second_div_image_gradint{
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .first_div, .second_div {
     flex-direction: column;
+    margin: 2rem 0; /* Reduced margin to avoid overflow */
+  }
+
+  .responsive-img-container img {
     width: 100%;
-    padding: 20px;
+    height: auto;
   }
-  .gradint_fam{
-    flex-direction: column;
-  }
-  .second_div_number_content{
+
+  .number_content, .second_div_number_content {
+    width: 100%;
     margin-top: 2rem;
-    width: 100%;
     padding: 20px;
   }
-  /* Styles for small devices */
-}
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Styles for medium devices */
-  .image_gradint{
-   
-    width: 64%;
- 
-  }
-  .number_content{
-    width: 36%;
-  }
-  .second_div_image_gradint{
-    width: 64%;
-  }
-  .second_div_number_content{
-    width: 36%;
+  .gradint_fam_1, .gradint_fam {
+    flex-direction: column;
+    align-items: center;
   }
 
-}
+  .gradint_line {
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 192, 25, 1),
+      rgba(237, 76, 117, 1),
+      rgba(151, 62, 255, 1),
+      rgba(0, 214, 204, 1)
+    );
+  }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  /* Styles for large devices */
-}
+  .number {
+    font-size: 22rem; /* Adjusted font size */
+  }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  /* Styles for extra large devices */
+  .second_number {
+    font-size: 22rem; /* Adjusted font size */
+    left: 40%;
+  }
 }

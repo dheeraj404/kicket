@@ -115,6 +115,7 @@ function Home() {
             <img
               src="/kicket-title.svg"
               alt="Kicket Title"
+
               className="kicket-title"
             />
           </header>
