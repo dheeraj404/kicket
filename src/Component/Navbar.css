@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Avenir+LT+Std:wght@400;700&display=swap');
+
+body {
+  font-family: 'Avenir LT Std', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container */
+.nav {
+  position: fixed;
+  top:2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: solid rgb(255, 255, 255);
+  width: 80%;
+  padding: 1rem;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo {
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 1rem;
+}
+
+/* Navbar links styling */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+.nav-links a.active {
+  color: #ffc107;
+}
+
+/* Request demo button styling */
+.request-demo {
+  background: linear-gradient(90deg, rgba(237, 76, 117, 1), rgba(151, 62, 255, 1));
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.request-demo:hover {
+  opacity: 0.8;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #fff;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+}
+
+/* Close icon styling */
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .navbar {
+    font-size: .8rem;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .nav-links li {
+    margin: 0 1rem;
+  }
+
+  .navbar-brand {
+    margin-bottom: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav {
+    font-size: .7rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent; /* Remove background morphism */
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove border */
+    padding: 0.5rem 1rem;
+    width: 100%;
+    backdrop-filter: none; /* Disable backdrop filter */
+    -webkit-backdrop-filter: none; /* Disable WebKit backdrop filter */
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    height: 30px; /* Adjust the logo size if needed */
+    margin-left: 1rem; /* Adjust the logo margin */
+  }
+
+  .navbar-brand h1 {
+    display: none; /* Hide the brand name */
+  }
+
+  .hamburger {
+    display: flex;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15); /* Add the morphism effect here */
+    border-radius: 0 0 20px 20px;
+    padding: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Enable backdrop filter for morphism */
+    -webkit-backdrop-filter: blur(10px); /* Enable WebKit backdrop filter */
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateY(0);
+  }
+}
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Styles for extra small devices */
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles for small devices */
+  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles for medium devices */
+  .navbar{
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Styles for large devices */
+  .navbar{
+    width: 80%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Styles for extra large devices */
+}

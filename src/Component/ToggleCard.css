@@ -1,0 +1,60 @@
+/* ToggleCard.css */
+.toggle-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .toggle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background: transparent;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-card.open::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 192, 25, 1),
+      rgba(237, 76, 117, 1),
+      rgba(151, 62, 255, 1),
+      rgba(0, 214, 204, 1)
+    );
+  }
+  
+  .toggle-card-header {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .toggle-card-header:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .toggle-card.open .toggle-card-header {
+    color: 
+    rgba(255, 192, 25, 1);
+  }
+  
+  .toggle-card-body {
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  

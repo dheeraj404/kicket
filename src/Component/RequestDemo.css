@@ -1,0 +1,102 @@
+.request-demo-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    
+  }
+  
+  .popup-content {
+    background: rgba(37, 37, 37, 1);
+    padding: 30px;
+    border: 2px solid rgba(217, 217, 217, 1); /* Added solid border */
+    border-image: linear-gradient(rgba(255, 192, 25, 1), rgba(237, 76, 117, 1), rgba(151, 62, 255, 1), rgba(0, 214, 204, 1)) 1;
+    width: 90%;
+    max-width: 700px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .popup-content h2 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased spacing between inputs */
+    margin-bottom: 15px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    flex: 1;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    background: transparent;
+    color: white;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+  }
+  
+  .form-group .phone-input-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group .phone-input-group select {
+    width: 30%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    background: transparent;
+    color: white;
+  }
+  
+  .form-group .phone-input-group input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    background: transparent;
+    color: white;
+  }
+  
+  .submit-button {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(rgba(237, 76, 117, 1), rgba(151, 62, 255, 1));
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    box-sizing: border-box;
+    
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

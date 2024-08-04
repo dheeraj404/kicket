@@ -1,0 +1,90 @@
+.Whykicket{
+    background-color: rgba(37, 37, 37, 1);
+    
+}
+.flex-container {
+    border-radius: 10px;
+    color: white;
+  }
+  .text_button h1{
+    color: white;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-img img{
+    width: 100%;
+    height: auto;
+    
+   
+  }
+  
+  .text-container {
+    padding: 20px;
+    
+  }
+  
+  .text-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    margin: 0;
+    word-wrap: break-word; /* Ensures text wrapping */
+  }
+  
+  .why-choose-us-container {
+  background: rgba(37, 37, 37, 1);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-img2{
+  width: 20%;
+  height: auto;
+  aspect-ratio: 3 / 3; /* Ensures the 4:3 aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.text-container {
+  padding: 20px;
+}
+
+.text-container h2 {
+  margin-bottom: 20px;
+}
+
+/* WhyChooseUs.css */
+.why-choose-us-container {
+    background-color: #252525;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .why-choose-us-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .why-choose-us-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 767px) {
+ .text-container h2{
+    display: flex;justify-content: center;
+    align-items: center;
+ }
+  }

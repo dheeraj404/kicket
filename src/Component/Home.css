@@ -1,0 +1,159 @@
+.home{
+  background-color: rgba(37, 37, 37, 1);
+}
+.home_first_div{
+ 
+  background-image: url('/public/background.png');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  
+}
+.header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kicket-title {
+  max-width: 80%;
+  height: auto;
+}
+
+
+.heading-text {
+  color: white;
+}
+.why_kicket_compo{
+  color: white;
+padding: 0px;
+margin-top: 5rem;
+margin-bottom: 2rem;
+
+}
+.why_kicket_compo_bg{
+  position: absolute;
+ 
+
+}
+.why_kicket_compo_bg img{
+ width: 50%;
+top: 0;
+opacity: .6;
+}
+.why_kicket_compo_heading
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+ 
+}
+.why_kicket_compo_heading span{
+  background: linear-gradient(
+    90deg,
+    rgba(255, 192, 25, 1) 0%,
+    rgba(237, 76, 117, 1) 25%,
+    rgba(151, 62, 255, 1) 50%,
+    rgba(0, 214, 204, 1) 75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+
+}
+
+.why_kicket_compo_para{
+  display: flex;
+  /* justify-content: right; */
+  align-items: center;
+  align-self: center;
+  /* text-align: center; */
+  width: 80%;
+  margin:auto;
+  /* border: 2px solid red; */
+  text-align: center;
+}
+.why_kicket_compo_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.why_kicket_compo_button button{
+  background: linear-gradient(
+    90deg,
+    rgba(237, 76, 117, 1) 0%,
+    rgba(151, 62, 255, 1) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 15rem;
+
+}
+
+.image-container {
+  position: relative;
+}
+
+.responsive-image { 
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+
+
+.know-more-button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(151, 62, 255, 1) 0%,
+    rgba(237, 76, 117, 1) 100%
+  );
+}
+
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .home_first_div{
+    height: 55vh;
+  }
+  .why_kicket_compo{
+    padding: 0px;
+  }
+  .why_kicket_compo_para{
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles for small devices */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles for medium devices */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Styles for large devices */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Styles for extra large devices */
+}

@@ -1,0 +1,195 @@
+.footer {
+  background-color: rgba(37, 37, 37, 1);
+  color: #ffffff;
+  font-family: 'Avenir LT Std', sans-serif;
+  position: relative;
+  padding: 60px;
+}
+
+.footer-logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer_main_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.footer_first_div {
+  width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer_first_div p {
+  width: 80%;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  font-size: 1cqh;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgba(255, 192, 25, 1), rgba(237, 76, 117, 1), rgba(151, 62, 255, 1), rgba(0, 214, 204, 1));
+}
+
+.social-icons a i {
+  font-size: 22px;
+  color: #ffffff;
+  background-color: rgba(37, 37, 37, 1);
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.footer p,
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer; /* Ensures the link is clickable */
+}
+
+.footer a:hover {
+  color: #FFD700; /* Gold hover effect */
+}
+
+.footer_second_div {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top:1rem ;
+  margin-bottom: 1rem;
+}
+
+.footer_links,
+.footer_third_div {
+  width: 48%;
+}
+
+.footer_last_image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.footer_last_image img {
+  opacity: 0.2;
+  display: block;
+  z-index: -1;
+  pointer-events: none; /* Allows links to be clickable while image is visible */
+}
+/* General link styles in the footer */
+.footer .text-light {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hover effect for the Link components */
+.footer .text-light:hover {
+  color: #FFD700 !important;
+ 
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .footer_main_div {
+    flex-direction: column;
+  }
+
+  .footer_first_div,
+  .footer_second_div {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .footer_first_div p {
+    width: 100%;
+  }
+
+  .footer_last_image img {
+    height: 45vh; /* Adjust height for smaller screens */
+  }
+  .footer{
+    padding: 5px;
+  }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer_second_div {
+    flex-direction: column;
+  }
+
+  .footer_links,
+  .footer_third_div {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .footer_last_image img {
+    height: 50vh; /* Adjust height for small screens */
+  }
+  .footer{
+    padding: 5px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer_second_div {
+    flex-direction: column;
+  }
+
+  .footer_links,
+  .footer_third_div {
+    width: 100%;
+  }
+
+  .footer_last_image img {
+    height: 50vh; /* Adjust height for medium screens */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .footer_second_div {
+    flex-direction: row;
+  }
+
+  .footer_links,
+  .footer_third_div {
+    width: 48%;
+  }
+
+  .footer_last_image img {
+    height: 65vh; /* Adjust height for larger screens */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .footer_second_div {
+    flex-direction: row;
+  }
+
+  .footer_links,
+  .footer_third_div {
+    width: 48%;
+  }
+}

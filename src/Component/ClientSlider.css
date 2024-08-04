@@ -1,0 +1,26 @@
+.client-slider-container {
+    padding: 20px;
+    font-family: 'Avenir LT Std', sans-serif;
+}
+  
+.client-slider-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+  
+.client-logo-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 20px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.client-logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}

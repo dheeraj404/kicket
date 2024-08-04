@@ -1,0 +1,37 @@
+.serivce{
+    background-color: rgba(37, 37, 37, 1);
+    
+}
+.flex-container {
+   
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-img {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* Ensures the 4:3 aspect ratio */
+    object-fit: cover; 
+  }
+  
+  .text-container {
+    padding: 20px;
+  }
+  
+  .text-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    margin: 0;
+    word-wrap: break-word; /* Ensures text wrapping */
+  }
+  
