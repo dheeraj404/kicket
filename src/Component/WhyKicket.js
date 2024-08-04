@@ -38,21 +38,22 @@ const WhyKicket=()=>{
 
             </div>
 
-      <div className="flex-container">
-      <Row className="">
-        <Col xs={12} md={5} className="image-container">
+      <div className="Whykicket_flex-container">
+      
+        <div className="image-container">
           <img
             src="/service.png"
             alt="Description"
             className="img-fluid custom-img"
           />
-        </Col>
-        <Col xs={12} md={6} className="text-container" style={{marginTop:'4rem'}}>
-          <h2>Your Heading</h2>
+        </div>
+        <div className="text-container">
+          <h2>About us</h2>
           <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus ut sem tincidunt, ut posuere nulla sollicitudin.</p>
-        </Col>
-      </Row>
+        </div>
+     
     </div>
+  
     <ResponsiveCarousel></ResponsiveCarousel>
     <div className="why-choose-us-container" style={{margin:'20px'}}>
       <Row className="align-items-center">

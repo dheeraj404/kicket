@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ResponsiveCard from './ ResponsiveCard';
 import { width } from '@fortawesome/free-solid-svg-icons/fa0';
-
+import './ResponsiveCarousel.css'
 const ResponsiveCarousel = () => {
     const data = [
         {
@@ -48,8 +48,13 @@ const ResponsiveCarousel = () => {
     };
 
     return (
-        <div style={{ margin: '0 20px' ,display:'flex',justifyContent:'center',alignItems:'center'}}>
-            <Slider {...settings} style={{width:'80%'}} className=''>
+        <div>
+           <div><h1 style={{color:'white'}} className='ResponsiveCarousel_head'>Success Stories</h1></div>
+        <div style={{ display:'flex',justifyContent:'center',alignItems:'center'}}>
+        
+            <Slider {...settings} style={{width:'80%'}} className='ResponsiveCarousel' >
+               
+         
                 {data.map((item, index) => (
                     <div key={index}>
                         <ResponsiveCard 
@@ -60,6 +65,7 @@ const ResponsiveCarousel = () => {
                     </div>
                 ))}
             </Slider>
+        </div>
         </div>
     );
 };
