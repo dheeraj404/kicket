@@ -47,7 +47,7 @@ const HomeService = () => {
           <div className="number">1</div>
           <div className="first_div_content">
             <h1>Our Ticket booking</h1>
-            <p>
+            <p style={{textAlign:'right'}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
