@@ -32,7 +32,6 @@
   
   .why-choose-us-container {
   background: rgba(37, 37, 37, 1);
-  padding: 20px;
   border-radius: 10px;
   color: white;
 }
@@ -88,20 +87,38 @@
  .contact-background{
   height: 70vh !important;
  }
+ .image-container img{
+  width: 88%;
+  height: 60%;
+}
+ .why-choose-us-container
+ {
+  flex-direction: column;
+ }
+ .image-container_2 img{
+  width: 110% !important;
+}
 }
 
 /* Small devices (phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* Styles for small devices */
-  .Whykicket_flex-container{
+  /* .Whykicket_flex-container{
     flex-direction: column;
-  } 
+  }  */
   .flex-container{
     padding: 0px;
   }
   .contact-background{
     height: 80vh !important;
    }
+   .image-container img{
+    width: 80%;
+    height: 90%;
+  }
+  .image-container_2 img{
+    width: 100% !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -110,6 +127,9 @@
   .custom-img img{
     width: 80%;
     height: 80%;
+  }
+  .image-container_2 img{
+    width: 100% !important;
   }
   
 }

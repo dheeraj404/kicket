@@ -53,16 +53,16 @@ const WhyKicket=()=>{
         </div>
      
     </div>
-  
+   
     <ResponsiveCarousel></ResponsiveCarousel>
     <div className="why-choose-us-container" style={{margin:'20px'}}>
       <Row className="align-items-center">
-        <Col xs={12} md={6} className="image-container">
+        <Col xs={12} md={6} className="image-container_2">
           <img
             src="/whyus.png"
             alt="Why Choose Us"
             className="img-fluid custom-img2"
-            style={{ width: '80%', height: 'auto', objectFit: 'cover',  }}
+            style={{ width: '95%', height: 'auto', objectFit: 'cover',  }}
           />
         </Col>
         <Col xs={12} md={6} className="text-container">
