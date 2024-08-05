@@ -3,17 +3,19 @@ import './Contact.css';
 import Footer from './Footer';
 import TopFooter from './TopFooter';
 import HomeService from './HomeService';
+
 const Contact = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [responseMessage, setResponseMessage] = useState('');
 
     useEffect(() => {
-      const handleResize = () => setWindowWidth(window.innerWidth);
+        const handleResize = () => setWindowWidth(window.innerWidth);
   
-      window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize);
   
-      // Cleanup on unmount
-      return () => window.removeEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -30,8 +32,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Replace with your API endpoint
-        const apiEndpoint = 'https://your-api-endpoint.com/submit';
+        const apiEndpoint = 'http://kicketapi.webprismits.us/api/contact';
         
         fetch(apiEndpoint, {
             method: 'POST',
@@ -42,16 +43,17 @@ const Contact = () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
-            // Handle success
+            // Set response message
+            setResponseMessage(data.message || 'Message sent successfully!');
+            // Set timeout to refresh the page after 6 seconds
+            setTimeout(() => {
+                window.location.reload();
+            }, 6000);
         })
         .catch((error) => {
-            console.error('Error:', error);
-            // Handle error
+            setResponseMessage('Failed to send message. Please try again later.');
         });
     };
-
-   
 
     const contactImageStyle = {
         width: '100%',
@@ -70,15 +72,13 @@ const Contact = () => {
 
     return (
         <section className="contact-section">
-            <div className="contact-background" >
+            <div className="contact-background">
                 <h1>Contact</h1>
             </div>
             <div className="contact-container">
                 <div className="contact-content">
                     <div className="contact-image">
-                      
                         <img src={`${process.env.PUBLIC_URL}/con1.png`} alt="Contact" style={contactImageStyle} />
-
                     </div>
                     <div className="contact-form" style={formContainerStyle}>
                         <h2>Get In Touch With Us</h2>
@@ -105,13 +105,16 @@ const Contact = () => {
                             ></textarea>
                             <button type="submit">Submit</button>
                         </form>
+                        {responseMessage && (
+                            <div className="alert-box">
+                                {responseMessage}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
-           
-            <TopFooter></TopFooter>
-            <Footer></Footer>
-
+            <TopFooter />
+            <Footer />
         </section>
     );
 };

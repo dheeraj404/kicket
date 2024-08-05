@@ -101,6 +101,23 @@ background-color: rgb(37,37,37,1);
 .contact-form button:hover {
     background: linear-gradient(90deg, #feb47b, #ff7e5f);
 }
+.alert-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #d4edda; /* light green for success */
+    color: #155724; /* dark green text */
+    border: 1px solid #c3e6cb; /* light green border */
+}
+
+/* If you want to handle error messages as well, you can add a different style */
+.alert-box.error {
+    background-color: #f8d7da; /* light red for error */
+    color: #721c24; /* dark red text */
+    border: 1px solid #f5c6cb; /* light red border */
+}
 
 @media (min-width: 768px) {
     .contact-content {

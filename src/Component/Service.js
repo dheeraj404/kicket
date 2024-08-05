@@ -74,7 +74,7 @@ const Service = () => {
     {/* <KeyFeatures/> */}
     {/* Conditional Rendering based on screen size */}
     {isMobile ? <KeyFeatures_Mobile /> : <KeyFeatures />}
-    <ServicesSnippets items={data}/>
+   
    <ResponsiveCarousel></ResponsiveCarousel>
    <TopFooter></TopFooter>
    <Footer></Footer>
