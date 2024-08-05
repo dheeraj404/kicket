@@ -32,8 +32,8 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const apiEndpoint = 'http://kicketapi.webprismits.us/api/contact';
-        
+        const apiEndpoint = 'https://kicketapi.webprismits.us/api/contact'; // Ensure it's HTTPS
+    
         fetch(apiEndpoint, {
             method: 'POST',
             headers: {
@@ -43,9 +43,7 @@ const Contact = () => {
         })
         .then(response => response.json())
         .then(data => {
-            // Set response message
             setResponseMessage(data.message || 'Message sent successfully!');
-            // Set timeout to refresh the page after 6 seconds
             setTimeout(() => {
                 window.location.reload();
             }, 6000);
@@ -57,6 +55,7 @@ const Contact = () => {
             }, 6000);
         });
     };
+    
 
     const contactImageStyle = {
         width: '100%',
