@@ -100,6 +100,9 @@ opacity: .6;
   width: 15rem;
 
 }
+.why_kicket_compo_button button:hover{
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
 
 .image-container {
   position: relative;

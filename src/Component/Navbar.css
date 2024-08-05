@@ -1,4 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Avenir+LT+Std:wght@400;700&display=swap');
+/* Define the keyframes for the rotating effect */
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add a hover effect to the logo and brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1); /* Slightly scale the logo on hover */
+}
+
+.logo {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the logo on hover */
+.navbar-brand:hover .logo {
+  animation: rotateRing 1s linear infinite;
+}
+
+h1 {
+  margin-left: 10px; /* Adjust spacing as needed */
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Change the color of the text on hover */
+.navbar-brand:hover h1 {
+  color: #FFD700; /* Change to gold color or any color of your choice */
+}
 
 body {
   font-family: 'Avenir LT Std', sans-serif;
@@ -82,8 +126,10 @@ body {
   cursor: pointer;
 }
 
+
 .request-demo:hover {
-  opacity: 0.8;
+ 
+  background: linear-gradient(90deg, #feb47b, #ff7e5f) !important;
 }
 
 /* Hamburger menu styling */

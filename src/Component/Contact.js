@@ -52,6 +52,9 @@ const Contact = () => {
         })
         .catch((error) => {
             setResponseMessage('Failed to send message. Please try again later.');
+            setTimeout(() => {
+                window.location.reload();
+            }, 6000);
         });
     };
 

@@ -85,6 +85,7 @@ padding: 60px;
   -webkit-text-stroke: 1px white;
   text-stroke: 10px white;
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .first_div_content {
@@ -112,7 +113,9 @@ padding: 60px;
   color: white;
   cursor: pointer;
 }
-
+.right_button button:hover{
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
 .second_div {
   flex-direction: row-reverse;
 }
@@ -134,7 +137,7 @@ padding: 60px;
 .second_number {
   position: absolute;
   font-size: 25rem;
-
+  pointer-events: none;
   color: transparent;
   -webkit-text-stroke: 1px white;
   text-stroke: 3px white;
@@ -155,6 +158,9 @@ color: white;
 cursor: pointer;
 margin-top: 1rem;
 gap: 10px;}
+.left_button button:hover{
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
