@@ -41,10 +41,14 @@ margin-bottom: 2rem;
  
 
 }
+.why_kicket_compo_bg {
+  pointer-events: none;
+}
 .why_kicket_compo_bg img{
  width: 50%;
 top: 0;
 opacity: .6;
+z-index: -1;
 }
 .why_kicket_compo_heading
 {
