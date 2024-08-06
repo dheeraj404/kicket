@@ -12,7 +12,7 @@ const Service = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 575.98);
   const [carouselData, setCarouselData] = useState([]);
   useEffect(() => {
-    axios.get('https://kicketapi.webprismits.us/api/success-stories/')
+    axios.get('http://kicketapi.webprismits.us/api/services/1/success-stories')
       .then(response => {
         setCarouselData(response.data);
       })

@@ -4,15 +4,20 @@ import KeyFeatures from "./KeyFeatures";
 import {  Row, Col } from "react-bootstrap";
 import KeyFeatures_Mobile from "./KeyFeatures_Mobile";
 import TopFooter from "./TopFooter";
+import  axios  from "axios";
 import Footer from "./Footer";
 import ResponsiveCarousel from './ResponsiveCarousel'
 const Service_second = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 575.98);
-
+  const [carouselData, setCarouselData] = useState([]);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 875.98);
     };
+    axios.get('http://kicketapi.webprismits.us/api/services/2/success-stories')
+      .then(response => {
+        setCarouselData(response.data);
+      })
 
     window.addEventListener("resize", handleResize);
 
@@ -62,7 +67,7 @@ const Service_second = () => {
     {/* Conditional Rendering based on screen size */}
     {isMobile ? <KeyFeatures_Mobile /> : <KeyFeatures />}
    
-   <ResponsiveCarousel></ResponsiveCarousel>
+   <ResponsiveCarousel data={carouselData}></ResponsiveCarousel>
    <TopFooter></TopFooter>
    <Footer></Footer>
     </div>
