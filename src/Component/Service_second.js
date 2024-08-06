@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Service.css";
 import KeyFeatures from "./KeyFeatures";
-import { Container, Row, Col } from "react-bootstrap";
-import ServicesSnippets from './ServicesSnippets';
-import HomeService from "./HomeService";
+import {  Row, Col } from "react-bootstrap";
 import KeyFeatures_Mobile from "./KeyFeatures_Mobile";
 import TopFooter from "./TopFooter";
 import Footer from "./Footer";
 import ResponsiveCarousel from './ResponsiveCarousel'
-const Service = () => {
+const Service_second = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 575.98);
 
   useEffect(() => {
@@ -41,19 +39,19 @@ const Service = () => {
     <div className="serivce">
       
       <div className="contact-background_service" >
-        <h1>Services1</h1>
+        <h1>Services2</h1>
       </div>
 
       <div className="flex-container">
       <Row className="align-items-center justify-space-around">
-        <Col xs={14} md={6} className="image-container">
+        <Col xs={12} md={6} className="image-container">
           <img
             src="/service.png"
             alt="Description"
             className="img-fluid custom-img"
           />
         </Col>
-        <Col xs={14} md={6} className="text-container">
+        <Col xs={12} md={6} className="text-container">
           <h2>Your Heading</h2>
           <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus ut sem tincidunt, ut posuere nulla sollicitudin.</p>
         </Col>
@@ -70,4 +68,4 @@ const Service = () => {
     </div>
   );
 };
-export default Service;
+export default Service_second;

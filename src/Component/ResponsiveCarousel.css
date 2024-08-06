@@ -1,8 +1,8 @@
  .ResponsiveCarousel{
-width: 80%;
+width: 100%;
  }
 .ResponsiveCarousel_head{
-text-align: center;
+
 margin-top: 1rem;
 }
  /* Extra small devices (phones, less than 576px) */

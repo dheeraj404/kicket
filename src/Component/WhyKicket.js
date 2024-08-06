@@ -55,17 +55,17 @@ const WhyKicket=()=>{
     </div>
    
     <ResponsiveCarousel></ResponsiveCarousel>
-    <div className="why-choose-us-container" style={{margin:'20px'}}>
+    <div className="why-choose-us-container" style={{paddingLeft:'7%',paddingRight:'7%'}}>
       <Row className="align-items-center">
-        <Col xs={12} md={6} className="image-container_2">
+        <Col xs={12} md={5} className="image-container_2">
           <img
             src="/whyus.png"
             alt="Why Choose Us"
             className="img-fluid custom-img2"
-            style={{ width: '95%', height: 'auto', objectFit: 'cover',  }}
+            style={{ width: '90%', height: 'auto', objectFit: 'cover',  }}
           />
         </Col>
-        <Col xs={12} md={6} className="text-container">
+        <Col xs={12} md={7} className="text-container">
         <h2>Why Choose Us</h2>
       {cardData.map((card, index) => (
         <ToggleCard key={index} title={card.title} index={index}>

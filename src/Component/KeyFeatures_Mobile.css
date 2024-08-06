@@ -88,7 +88,7 @@
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
   .KeyFeatures_Mobile{
-    padding: 10px;
+    padding: 25px;
   }
   .key_image img{
     width: 80%;
@@ -108,7 +108,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* Styles for small devices */
   .KeyFeatures_Mobile{
-    padding: 12px;
+    padding: 25px;
   }
   .key_image img{
     width: 90%;

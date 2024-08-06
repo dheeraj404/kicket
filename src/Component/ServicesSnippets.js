@@ -5,9 +5,9 @@ import './ServicesSnippets.css';
 const CarouselComponent = ({ items }) => {
   return (
     <div className='.cc'>
-      <div>
+      {/* <div>
         <h1>Client Testimonials</h1>
-      </div>
+      </div> */}
     <div className="mt-4 CarouselComponent">
       <h2 className="text-white">Services Snippets</h2>
       <Carousel indicators={false} interval={null}>

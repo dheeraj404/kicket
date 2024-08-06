@@ -4,6 +4,7 @@
 }
 .Whykicket_flex-container {
     display: flex;
+  padding-right: 6%;
   }
   .text_button h1{
     color: white;
@@ -18,6 +19,7 @@
     justify-content: center;
     text-align: justify;
     color: white;
+
   }
  
   
@@ -37,9 +39,9 @@
 }
 
 .image-container {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .custom-img2{
