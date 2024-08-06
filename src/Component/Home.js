@@ -1,76 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Home.css";
 import ClientSlider from "./ClientSlider";
 import { useNavigate } from "react-router-dom";
-import TestimonialCard from "./TestimonialCard";
 import SimpleCarousel from "./SimpleCarousel";
 import ServicesSnippets from "./ServicesSnippets";
 import HomeService from "./HomeService";
 import Footer from "./Footer";
-import ResponsiveCard from "./ ResponsiveCard";
 import TopFooter from "./TopFooter";
-function Home() {
-  const data = [
-    {
-      image: "/pngwing.png",
-      title: "Dolor It",
-      text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum.",
-    },
-    {
-      image: "https://via.placeholder.com/300x500",
-      title: "Another Service",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    // Add more items as needed
-  ];
-  const testimonials = [
-    {
-      imgUrl: "/user.png",
-      name: "Bidisha Bhowmick",
-      rating: 4,
-      review: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
-    },
-    {
-      imgUrl: "/user.png",
-      name: "John Doe",
-      rating: 5,
-      review:
-        "Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
-    },
-    {
-      imgUrl: "/nice.png",
-      name: "Jane Smith",
-      rating: 3,
-      review:
-        "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris.",
-    },
-    {
-      imgUrl: "https://via.placeholder.com/150",
-      name: "Jane Smith",
-      rating: 3,
-      review:
-        "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris.",
-    },
-    {
-      imgUrl: "https://via.placeholder.com/150",
-      name: "Jane Smith",
-      rating: 3,
-      review:
-        "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris.",
-    },
-    {
-      imgUrl: "https://via.placeholder.com/150",
-      name: "Jane Smith",
-      rating: 3,
-      review:
-        "Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris.",
-    },
-    // Add more slides as needed
-  ];
 
+function Home() {
+  const [testimonials, setTestimonials] = useState([]);
+  const [homeContent, setHomeContent] = useState("");
   const navigate = useNavigate();
 
- 
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await axios.get("https://kicketapi.webprismits.us/api/testimonial");
+        console.log("Testimonials data:", response.data); // Debugging line
+        setTestimonials(response.data);
+      } catch (error) {
+        console.error("Error fetching testimonials data:", error);
+      }
+    };
+
+    const fetchHomeContent = async () => {
+      try {
+        const response = await axios.get("https://kicketapi.webprismits.us/api/home-content");
+        console.log("Home content data:", response.data); // Debugging line
+        setHomeContent(response.data.why_kicket);
+      } catch (error) {
+        console.error("Error fetching home content data:", error);
+      }
+    };
+
+    fetchTestimonials();
+    fetchHomeContent();
+  }, []);
 
   const overlayStyle = {
     position: "absolute",
@@ -93,6 +60,7 @@ function Home() {
     alignItems: "center",
     marginTop: "5.5rem",
   };
+
   const backImageStyle = {
     backgroundImage: "url(/back.png)",
     backgroundSize: "cover",
@@ -115,7 +83,6 @@ function Home() {
             <img
               src="/kicket-title.svg"
               alt="Kicket Title"
-
               className="kicket-title"
             />
           </header>
@@ -123,34 +90,27 @@ function Home() {
       </div>
 
       <div className="why_kicket_compo">
-        <div className="why_kicket_compo_bg">
-          <img src="/des.png"/>
-        </div>
+      
         <div className="why_kicket_compo_heading">
           <h1>
             Why <span>Kicket</span>
           </h1>
         </div>
         <div className="why_kicket_compo_para">
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>{homeContent}</p>
         </div>
-        <div className="why_kicket_compo_button"><button onClick={handleButtonClick}>Know more</button></div>
+        <div className="why_kicket_compo_button">
+          <button onClick={handleButtonClick}>Know more</button>
+        </div>
       </div>
-           <HomeService></HomeService>
-        <ServicesSnippets items={data}/>
-        <div style={backImageStyle}>
-     
+      <HomeService />
+      <ServicesSnippets />
+      <div style={backImageStyle}>
         <SimpleCarousel testimonials={testimonials} />
-<ClientSlider></ClientSlider>
+        <ClientSlider />
       </div>
-<TopFooter></TopFooter>
-      <Footer></Footer>
+      <TopFooter />
+      <Footer />
     </div>
   );
 }

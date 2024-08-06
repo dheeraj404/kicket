@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { Modal, Button } from 'react-bootstrap';
 import './RequestDemo.css';
 
 const RequestDemo = ({ onClose }) => {
@@ -15,6 +16,14 @@ const RequestDemo = ({ onClose }) => {
     hearAbout: '',
   });
 
+  const [show, setShow] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
+
+  const handleClose = () => {
+    setShow(false);
+    onClose();
+  };
+
   const handleChange = (value, country) => {
     setFormData({ ...formData, phone: value });
   };
@@ -26,21 +35,33 @@ const RequestDemo = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Make API call here
-    fetch('/api/request-demo', {
+
+    const payload = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      phone: `+${formData.phone}`, // Ensure phone includes country code
+      job_title: formData.jobTitle,
+      company: formData.company,
+      event_type: formData.eventType,
+      hear_about_us: formData.hearAbout,
+    };
+
+    fetch('https://kicketapi.webprismits.us/api/enquire', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(payload),
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
-      onClose();
+      setModalMessage('Success: Your request has been submitted successfully.');
+      setShow(true);
     })
     .catch((error) => {
-      console.error('Error:', error);
+      setModalMessage(`Error: ${error.message}`);
+      setShow(true);
     });
   };
 
@@ -66,7 +87,7 @@ const RequestDemo = ({ onClose }) => {
                 border: '1px solid rgba(217, 217, 217, 1)',
                 background: 'transparent',
                 color: 'white',
-                height:'3.3rem'
+                height: '3.3rem'
               }}
               buttonStyle={{
                 borderRadius: '15px',
@@ -80,21 +101,36 @@ const RequestDemo = ({ onClose }) => {
           <div className="form-group">
             <select name="eventType" value={formData.eventType} onChange={handleInputChange}>
               <option value="">Type of Event</option>
-              {/* Add options here */}
+              <option value="offline">Offline</option>
+              <option value="online">Online</option>
             </select>
             <select name="hearAbout" value={formData.hearAbout} onChange={handleInputChange}>
               <option value="">How did you hear about us?</option>
-              {/* Add options here */}
+              <option value="linkedin">LinkedIn</option>
+              <option value="facebook">Facebook</option>
+              <option value="twitter">Twitter</option>
+              <option value="google">Google Search</option>
+              <option value="referral">Referral</option>
             </select>
           </div>
           <div className='center'>
-          <button type="submit" className="submit-button">Request A Demo</button>
+            <button type="submit" className="submit-button">Request A Demo</button>
           </div>
         </form>
       </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Request A Demo</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{modalMessage}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
 
 export default RequestDemo;
-

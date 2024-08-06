@@ -2,16 +2,23 @@ import React, { useState, useEffect } from "react";
 import "./Service.css";
 import KeyFeatures from "./KeyFeatures";
 import { Container, Row, Col } from "react-bootstrap";
-import ServicesSnippets from './ServicesSnippets';
-import HomeService from "./HomeService";
+import axios from "axios";
+
 import KeyFeatures_Mobile from "./KeyFeatures_Mobile";
 import TopFooter from "./TopFooter";
 import Footer from "./Footer";
 import ResponsiveCarousel from './ResponsiveCarousel'
 const Service = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 575.98);
-
+  const [carouselData, setCarouselData] = useState([]);
   useEffect(() => {
+    axios.get('https://kicketapi.webprismits.us/api/success-stories/')
+      .then(response => {
+        setCarouselData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching carousel data:', error);
+      });
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 875.98);
     };
@@ -64,7 +71,7 @@ const Service = () => {
     {/* Conditional Rendering based on screen size */}
     {isMobile ? <KeyFeatures_Mobile /> : <KeyFeatures />}
    
-   <ResponsiveCarousel></ResponsiveCarousel>
+   <ResponsiveCarousel data={carouselData}></ResponsiveCarousel>
    <TopFooter></TopFooter>
    <Footer></Footer>
     </div>

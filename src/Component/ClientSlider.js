@@ -1,20 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './ClientSlider.css';
-
-const clients = [
-  { id: 1, logo: 'Client.png' },
-  { id: 2, logo: 'Client.png' },
-  { id: 3, logo: 'Client.png' },
-  { id: 4, logo: 'Client.png' },
-  { id: 5, logo: 'Client.png' },
-  { id: 6, logo: 'Client.png' },
-  { id: 7, logo: 'Client.png' },
-  { id: 8, logo: 'Client.png' },
-  { id: 9, logo: 'Client.png' },
-  { id: 10, logo: 'Client.png' }
-];
 
 const responsive = {
   superLargeDesktop: {
@@ -40,6 +28,21 @@ const responsive = {
 };
 
 const ClientSlider = () => {
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    const fetchClients = async () => {
+      try {
+        const response = await axios.get('https://kicketapi.webprismits.us/api/client'); // Replace with your API endpoint
+        setClients(response.data);
+      } catch (error) {
+        console.error('Error fetching client data:', error);
+      }
+    };
+
+    fetchClients();
+  }, []);
+
   return (
     <div className="client-slider-container">
       <h2 className="text-center">Our Clients</h2>

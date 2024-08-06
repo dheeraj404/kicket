@@ -1,7 +1,7 @@
 import React from 'react';
 import './TestimonialCard.css';
 
-const TestimonialCard = ({ imgUrl, name, rating, review }) => {
+const TestimonialCard = ({  name,image,message, rating }) => {
   const renderStars = () => {
     const starColors = [
       '#FFD700', // Light Gold
@@ -29,14 +29,14 @@ const TestimonialCard = ({ imgUrl, name, rating, review }) => {
   return (
     <div className="testimonial-card">
       <div className="card-header">
-        <img src={imgUrl} alt="Profile" className="profile-img" />
+        <img src={image} alt="Profile" className="profile-img" />
         <div className="name-rating">
           <h3 className="name">{name}</h3>
           <div className="stars">{renderStars()}</div>
         </div>
       </div>
       <div className="card-body">
-        <p>{review}</p>
+        <p>{message}</p>
       </div>
     </div>
   );
