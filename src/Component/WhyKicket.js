@@ -31,7 +31,7 @@ const WhyKicket = () => {
 
     axios.get('https://kicketapi.webprismits.us/api/about-content')
       .then(response => {
-        console.log(response.data[0].description);
+       
         setAboutData(response.data);
       })
       .catch(error => {
@@ -63,7 +63,7 @@ const WhyKicket = () => {
         <div className="Whykicket_flex-container">
           <div className="image-container">
             <img
-              src='./nice.png'
+              src={aboutData[0].image}
               alt="Description"
               className="img-fluid custom-img"
             />
