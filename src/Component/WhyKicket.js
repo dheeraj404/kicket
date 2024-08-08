@@ -46,7 +46,7 @@ const WhyKicket = () => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'top',
     color: '#fff',
-    height: '75vh',
+    height: '90vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
