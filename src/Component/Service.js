@@ -11,10 +11,12 @@ import ResponsiveCarousel from './ResponsiveCarousel'
 const Service = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 575.98);
   const [carouselData, setCarouselData] = useState([]);
+  const [keyFeaturesData, setKeyFeaturesData] = useState([]);
   useEffect(() => {
     axios.get('http://kicketapi.webprismits.us/api/services/1/success-stories')
       .then(response => {
         setCarouselData(response.data);
+        setKeyFeaturesData(response.data);
       })
       .catch(error => {
         console.error('Error fetching carousel data:', error);
@@ -69,7 +71,7 @@ const Service = () => {
 {/* <KeyFeatures_Mobile></KeyFeatures_Mobile> */}
     {/* <KeyFeatures/> */}
     {/* Conditional Rendering based on screen size */}
-    {isMobile ? <KeyFeatures_Mobile /> : <KeyFeatures />}
+    {isMobile ? <KeyFeatures_Mobile /> : <KeyFeatures data={keyFeaturesData}/>}
    
    <ResponsiveCarousel data={carouselData}></ResponsiveCarousel>
    <TopFooter></TopFooter>
