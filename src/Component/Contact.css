@@ -19,7 +19,7 @@ background-color: rgb(37,37,37,1);
         background-repeat: no-repeat;
         background-Position: top;
         color: #fff;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,6 +230,9 @@ background-color: rgb(37,37,37,1);
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.Contact_second{
+  padding: 80px;
 }
 
 }
