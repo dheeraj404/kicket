@@ -5,7 +5,6 @@ import './SimpleCarousel.css';
 const SimpleCarousel = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
-
   function getSlidesToShow() {
     if (window.innerWidth >= 1024) return 3; // Laptops and larger screens
     if (window.innerWidth >= 600) return 2; // Tablets
@@ -53,14 +52,17 @@ const SimpleCarousel = ({ testimonials }) => {
       <button className="carousel-button prev-button" onClick={prevSlide}>
         &#10094; {/* Unicode for left arrow */}
       </button>
+     
       <div className="carousel-slides">
         {visibleSlides.map((testimonial, index) => (
+            
           <TestimonialCard
-            key={index}
-            imgUrl={testimonial.imgUrl}
-            name={testimonial.name}
+          name={testimonial.name}
+            image={testimonial.image}
+           
             rating={testimonial.rating}
-            review={testimonial.review}
+            message={testimonial.message}
+          
           />
         ))}
       </div>

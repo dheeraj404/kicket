@@ -29,7 +29,7 @@ function Home() {
       try {
         const response = await axios.get("https://kicketapi.webprismits.us/api/home-content");
         console.log("Home content data:", response.data); // Debugging line
-        setHomeContent(response.data.why_kicket);
+        setHomeContent(response.data[0].why_kicket);
       } catch (error) {
         console.error("Error fetching home content data:", error);
       }
@@ -59,6 +59,7 @@ function Home() {
     justifyContent: "center",
     alignItems: "center",
     marginTop: "5.5rem",
+    transform:'scale(1.15)'
   };
 
   const backImageStyle = {
@@ -88,7 +89,7 @@ function Home() {
           </header>
         </div>
       </div>
-
+<div className="without_first"> 
       <div className="why_kicket_compo">
       
         <div className="why_kicket_compo_heading">
@@ -102,15 +103,17 @@ function Home() {
         <div className="why_kicket_compo_button">
           <button onClick={handleButtonClick}>Know more</button>
         </div>
+      
       </div>
       <HomeService />
       <ServicesSnippets />
-      <div style={backImageStyle}>
+      <div className="testimonials_client">
         <SimpleCarousel testimonials={testimonials} />
         <ClientSlider />
       </div>
-      <TopFooter />
+      <TopFooter /> 
       <Footer />
+      </div>
     </div>
   );
 }

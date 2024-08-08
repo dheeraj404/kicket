@@ -1,6 +1,6 @@
 
 .CarouselComponent{
-  padding: 60px;
+ padding: 10px;
 }
 .carousel-slide {
   display: flex;
@@ -11,7 +11,7 @@
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  height: 50vh;
+  height: 60vh;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border: 1px solid rgba(255, 255, 255, 0.4); /* Border for glass effect */
   margin-bottom: 20px;

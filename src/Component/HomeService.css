@@ -1,13 +1,40 @@
-.HomeService {
+/* .HomeService {
   background-color: rgb(37, 37, 37);
   color: white;
-
   background-image: url('/public/back_service.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-padding: 60px;
+padding: 20px;
+ */
+.HomeService {
+  position: relative;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  overflow: hidden; /* Ensure content doesn't overflow the pseudo-element */
+  padding: 10px;
 }
+
+.HomeService::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/back_service.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  opacity: 0.3; /* Control background image opacity here */
+  z-index: 1; /* Ensure the pseudo-element is behind the content */
+}
+
+.HomeService > * {
+  position: relative;
+  z-index: 2; /* Ensure content is above the pseudo-element */
+}
+
 
 .first_div,
 .second_div {
@@ -277,10 +304,19 @@ font-size: 25rem;
 }
 
 /* Small devices (phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 850px) {
+  .HomeService {
+    padding: 10px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
   .first_div, .second_div {
     flex-direction: column;
     margin: 2rem 0; /* Reduced margin to avoid overflow */
+  }
+  .image_gradint{
+    flex-direction: column;
+    width: 100%;
   }
 
   .responsive-img-container img {
@@ -291,12 +327,15 @@ font-size: 25rem;
   .number_content, .second_div_number_content {
     width: 100%;
     margin-top: 2rem;
-    padding: 20px;
   }
 
   .gradint_fam_1, .gradint_fam {
     flex-direction: column;
     align-items: center;
+  }
+  .second_div_image_gradint{
+    flex-direction: column;
+    width: 100%;
   }
 
   .gradint_line {
@@ -312,11 +351,12 @@ font-size: 25rem;
   }
 
   .number {
-    font-size: 22rem; /* Adjusted font size */
+    font-size: 20rem; /* Adjusted font size to prevent overflow */
+    left: -3%; /* Ensures the number stays within the viewport */
   }
 
   .second_number {
-    font-size: 22rem; /* Adjusted font size */
+    font-size: 20rem; /* Adjusted font size */
     left: 40%;
   }
 }

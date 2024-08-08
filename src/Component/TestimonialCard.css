@@ -2,7 +2,7 @@
     border: 2px solid rgba(255, 255, 255, 0.15); /* Adding a border */
     padding: 20px;
     border-radius: 15px;
-    max-width: 300px;
+    max-width: 500px;
     margin: auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -19,8 +19,8 @@
   
   .profile-img {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     margin-right: 10px;
   }

@@ -50,17 +50,17 @@ const Service = () => {
       <div className="contact-background_service" >
         <h1>Services1</h1>
       </div>
-
+<div className="Services_second">
       <div className="flex-container">
       <Row className="align-items-center justify-space-around">
-        <Col xs={14} md={6} className="image-container">
+        <Col xs={14} md={8} className="image-container">
           <img
             src="/service.png"
             alt="Description"
             className="img-fluid custom-img"
           />
         </Col>
-        <Col xs={14} md={6} className="text-container">
+        <Col xs={14} md={8} className="text-container">
           <h2>Your Heading</h2>
           <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus ut sem tincidunt, ut posuere nulla sollicitudin.</p>
         </Col>
@@ -74,6 +74,7 @@ const Service = () => {
    <ResponsiveCarousel data={carouselData}></ResponsiveCarousel>
    <TopFooter></TopFooter>
    <Footer></Footer>
+   </div>
     </div>
   );
 };

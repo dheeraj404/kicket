@@ -1,224 +1,250 @@
 .contact-section {
-    color: #fff;
-background-color: rgb(37,37,37,1);
+  color: #fff;
+  background-color: rgb(37, 37, 37, 1);
 }
-
+.Contact_second {
+  padding: 80px;
+}
 .contact-background h1 {
-    font-family: 'Avenir LT Std', sans-serif;
-    font-weight: 750;
-    color: rgba(255, 192, 25, 1);
-    font-size: 3rem;
+  font-family: "Avenir LT Std", sans-serif;
+  font-weight: 750;
+  color: rgba(255, 192, 25, 1);
+  font-size: 3rem;
 }
 
-.contact-background {
-   
-        backgroundImage: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(/public/contect.jpeg);
-         background-size: cover;
-        background-repeat: no-repeat;
-        background-Position: top;
-        color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.contact-background{
+  backgroundimage: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(37, 37, 37, 1)
+    ),
+    url(/public/contect.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: #fff;
+  height: 85vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: scale(1.25);
 }
 
 .contact-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-    background-color: rgba(37, 37, 37, 1);
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+  background-color: rgba(37, 37, 37, 1);
+  flex-wrap: wrap;
 }
 
 .contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+ 
+}
+.contact-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-image img {
-   
-    max-width: 464px;
-    height: auto;
-    border-radius: 10px;
-   
+  
+  height: auto;
+  border-radius: 10px;
+  aspect-ratio: 2/1.5;
+
 }
 
 .contact-form {
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0;
 }
 
 .contact-form h2 {
-    margin-bottom: 20px;
-    font-family: 'Avenir LT Std', sans-serif;
-    font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Avenir LT Std", sans-serif;
+  font-size: 2rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 15px 15px;
-    margin: 10px 0;
-    border-radius: 20px;
-    border: none;
-    background: #333;
-    color: #fff;
-    border: 1px solid white;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 15px 15px;
+  margin: 10px 0;
+  border-radius: 20px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border: 1px solid white;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
-    height: 5rem;
+  height: 5rem;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #bbb;
+  color: #bbb;
 }
 
 .contact-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(to right, rgba(237, 76, 117, 1), rgba(151, 62, 255, 1));
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    width: 50%;
-    max-width: 400px;
-    margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(
+    to right,
+    rgba(237, 76, 117, 1),
+    rgba(151, 62, 255, 1)
+  );
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 50%;
+  max-width: 400px;
+  margin-top: 10px;
 }
 
 .contact-form button:hover {
-    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
 }
 .alert-box {
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    background-color: #d4edda; /* light green for success */
-    color: #155724; /* dark green text */
-    border: 1px solid #c3e6cb; /* light green border */
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #d4edda; /* light green for success */
+  color: #155724; /* dark green text */
+  border: 1px solid #c3e6cb; /* light green border */
 }
 
 /* If you want to handle error messages as well, you can add a different style */
 .alert-box.error {
-    background-color: #f8d7da; /* light red for error */
-    color: #721c24; /* dark red text */
-    border: 1px solid #f5c6cb; /* light red border */
+  background-color: #f8d7da; /* light red for error */
+  color: #721c24; /* dark red text */
+  border: 1px solid #f5c6cb; /* light red border */
 }
 
-@media (min-width: 768px) {
-    .contact-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    .contact-image {
-        flex: 1;
-        margin-right: 20px;
-    }
-
-    .contact-form {
-        flex: 1;
-    }
-}
-
-@media (max-width: 767px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-content {
-        flex-direction: column;
-    }
-
-    .contact-image {
-        margin-bottom: 20px;
-    }
-}
 
 
 /* Extra Small Devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .contact-background{
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(/public/WhyKicket.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-Position: top;
-        color: #fff;
-    height: 65vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-       }
-       .contact-background h1{
-        font-size: 4rem;
-   
-       }.contact-image{
-        margin: 15px;
-       }
-}
-
-/* Small Devices (tablets, 576px and up) */
-@media (min-width: 576px) {
-    .contact-background{
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(/public/WhyKicket.png);
-       }
-       .contact-background h1{
-        font-size: 3rem;
-       }
-       .footer-logo-section p{
-      
-       }
-}
-
-/* Medium Devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-   .contact-background{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(/public/WhyKicket.png);
-   }
-   
-}
-
-/* Large Devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-}
-
-/* Extra Large Devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
     .contact-background {
-   
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(/public/contect.jpeg);
-         background-size: cover;
-        background-repeat: no-repeat;
-        background-Position: top;
-        color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-}
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(37, 37, 37, 1)
+        ),
+        url(/public/WhyKicket.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      color: #fff;
+      height: 65vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .contact-background h1 {
+      font-size: 4rem;
+    }
+    .contact-image {
+      margin: 15px;
+    }
+    .contact-content{
+     flex-direction: column !important;
+    }
+    .Contact_second{
+      padding: 10px;
+    }
+  }
+  
+  /* Small Devices (tablets, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .contact-background {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(37, 37, 37, 1)
+        ),
+        url(/public/WhyKicket.png);
+    }
+    .contact-background h1 {
+      font-size: 3rem;
+    }
+    .footer-logo-section p {
+      /* Add styles if necessary */
+    }
+    .contact-content{
+      flex-direction: column !important;
+     }
+     .Contact_second{
+      padding: 30px;
+    }
+  }
+  
+  /* Medium Devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .contact-background {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(37, 37, 37, 1)
+        ),
+        url(/public/contect.jpeg);
+    }
+    .contact-container{
+      flex-direction: column !important;
+     }
+     .Contact_second{
+      padding: 50px;
+    }
+  }
+  
+  /* Large Devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+      max-width: 960px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+    .Contact_second{
+      padding: 60px;
+    }
+  }
+  
+  /* Extra Large Devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .contact-background {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(37, 37, 37, 1)
+        ),
+        url(/public/contect.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  

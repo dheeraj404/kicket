@@ -37,7 +37,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-brand" onClick={navigateHome} style={{ cursor: 'pointer' }}>
           <img src="/kicket-logo.svg" alt="Kicket" className="logo" />
-          <h1 style={{ color: 'white', fontSize: '1.2rem' }}>Kicket</h1>
+          <h1>Kicket</h1>
         </div>
         <div>
           <button className="hamburger" onClick={toggleMenu}>

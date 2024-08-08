@@ -58,18 +58,17 @@ const Contact = () => {
     
 
     const contactImageStyle = {
-        width: '100%',
-        maxWidth: '464px',
-        height: 'auto',
+        width: '90%',
+        display:'flex',
+        
         borderRadius: '30px',
     };
 
     const formContainerStyle = {
-        padding: '20px',
         borderRadius: '10px',
         width: '100%',
-        maxWidth: '400px',
         margin: '0 auto',
+    
     };
 
     return (
@@ -77,6 +76,7 @@ const Contact = () => {
             <div className="contact-background">
                 <h1>Contact</h1>
             </div>
+            <div className='Contact_second'>
             <div className="contact-container">
                 <div className="contact-content">
                     <div className="contact-image">
@@ -117,6 +117,7 @@ const Contact = () => {
             </div>
             <TopFooter />
             <Footer />
+            </div>
         </section>
     );
 };

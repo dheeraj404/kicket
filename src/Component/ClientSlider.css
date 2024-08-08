@@ -30,8 +30,8 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .client-logo {
@@ -57,15 +57,15 @@
 
 @media (max-width: 768px) {
   .client-logo-container {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 
   }
   
   .client-logo {
     max-width: 70px;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
   }
   .client-slider-container{
     padding: 10px;
@@ -77,14 +77,14 @@
     padding: 0px;
   }
   .client-logo-container {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
   
   .client-logo {
     max-width: 100px;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
   }
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './WhyKicket.css';
 import { Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap';
-import ToggleCard from './ToggleCard'
+import ToggleCard from './ToggleCard';
 import TopFooter from './TopFooter';
 import Footer from './Footer';
 import ResponsiveCarousel from './ResponsiveCarousel';
@@ -10,6 +10,7 @@ import ResponsiveCarousel from './ResponsiveCarousel';
 const WhyKicket = () => {
   const [cardData, setCardData] = useState([]);
   const [carouselData, setCarouselData] = useState([]);
+  const [aboutData, setAboutData] = useState(null);
 
   useEffect(() => {
     axios.get('https://kicketapi.webprismits.us/api/selling-points')
@@ -27,15 +28,25 @@ const WhyKicket = () => {
       .catch(error => {
         console.error('Error fetching carousel data:', error);
       });
+
+    axios.get('https://kicketapi.webprismits.us/api/about-content')
+      .then(response => {
+        console.log(response.data[0].description);
+        setAboutData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching about data:', error);
+      });
   }, []);
 
   const backgroundImageStyle = {
-    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(${process.env.PUBLIC_URL}/Whykicket.png)`,
-    backgroundSize: 'cover',
+  backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(37, 37, 37, 1)), url(${process.env.PUBLIC_URL}/Whykicket.png)`,
+   //backgroundImage: `linear-gradient(to bottom, rgba(, 0, 0, 0), rgba(17, 13, 17, 1)), url(${process.env.PUBLIC_URL}/Whykicket.png)`,
+   backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'top',
     color: '#fff',
-    height: '100vh',
+    height: '75vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -45,22 +56,24 @@ const WhyKicket = () => {
   return (
     <div className='Whykicket'>
       <div className="contact-background" style={backgroundImageStyle}>
-        <h1>WhyKicket</h1>
+        <h1>Why Kicket</h1>
       </div>
-
-      <div className="Whykicket_flex-container">
-        <div className="image-container">
-          <img
-            src="/service.png"
-            alt="Description"
-            className="img-fluid custom-img"
-          />
+<div className='Whykicket_second'>
+      {aboutData && (
+        <div className="Whykicket_flex-container">
+          <div className="image-container">
+            <img
+              src='./nice.png'
+              alt="Description"
+              className="img-fluid custom-img"
+            />
+          </div>
+          <div className="text-container">
+            <h2>{aboutData[0].title}</h2>
+            <p>{aboutData[0].description}</p>
+          </div>
         </div>
-        <div className="text-container">
-          <h2>About us</h2>
-          <p>Your paragraph text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus ut sem tincidunt, ut posuere nulla sollicitudin.</p>
-        </div>
-      </div>
+      )}
 
       <ResponsiveCarousel data={carouselData} />
 
@@ -87,6 +100,7 @@ const WhyKicket = () => {
 
       <TopFooter />
       <Footer />
+      </div>
     </div>
   );
 };

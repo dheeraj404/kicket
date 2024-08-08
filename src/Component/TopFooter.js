@@ -15,6 +15,9 @@ const TopFooter = () => {
   };
 
   return (
+    <div>
+    <div className='left_line'></div>
+    <div className='right_line'></div>
     <div className='TopFooter'>
       <div className='phone_img'>
         <img src='/phone.png' className='respo-img' alt="Phone" />
@@ -30,6 +33,9 @@ const TopFooter = () => {
 
       {isDemoOpen && <RequestDemo onClose={closeDemoPopup} />} {/* Show the RequestDemo modal */}
     </div>
+   
+    </div>
+    
   );
 };
 

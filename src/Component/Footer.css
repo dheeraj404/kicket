@@ -3,7 +3,8 @@
   color: #ffffff;
   font-family: 'Avenir LT Std', sans-serif;
   position: relative;
-  padding: 60px;
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .footer-logo {
@@ -85,10 +86,11 @@
   bottom: 0;
   object-fit: cover;
   pointer-events: none;
+  height: 41vh;
 }
 
 .footer_last_image img {
-  opacity: 0.2;
+  opacity: 0.3;
   display: block;
   z-index: -1;
   pointer-events: none; /* Allows links to be clickable while image is visible */
@@ -124,7 +126,7 @@
   }
 
   .footer_last_image img {
-    height: 45vh; /* Adjust height for smaller screens */
+    height: 43vh; /* Adjust height for smaller screens */
   }
   .footer{
     padding: 5px;
@@ -144,7 +146,7 @@
   }
 
   .footer_last_image img {
-    height: 50vh; /* Adjust height for small screens */
+    height: 45vh; /* Adjust height for small screens */
   }
   .footer{
     padding: 5px;
@@ -163,7 +165,7 @@
   }
 
   .footer_last_image img {
-    height: 50vh; /* Adjust height for medium screens */
+    height: 49vh; /* Adjust height for medium screens */
   }
 }
 
@@ -179,7 +181,7 @@
   }
 
   .footer_last_image img {
-    height: 65vh; /* Adjust height for larger screens */
+    height: 50vh; /* Adjust height for larger screens */
   }
 }
 

@@ -7,7 +7,7 @@ const KeyFeatures = () => {
         <div className="KeyFeatures">
             <img src="/back.png" className="background-image" alt="Background" />
             <h1 className="heading">Key Features</h1>
-            <div style={{padding:'5%'}}>
+            <div style={{padding:'2%'}}>
                 <Row className="top_div">
                     <Col xs={12} md={4} className="service_col">
                         <div className="service_1">
