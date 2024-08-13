@@ -9,7 +9,7 @@
   background-position: right;
   background-repeat: no-repeat;
   width: 98%;
-  height: 43vh;
+  height: 40vh;
   margin-top: 3rem;
   margin-bottom: 2rem;
   /* overflow: hidden; Ensures overflowed elements are hidden inside the div */
@@ -167,10 +167,10 @@
 @media (min-width: 1200px) {
   /* Styles for extra large devices */
   .left_line{
-    top:220px;
+    top:200px;
   }
   .right_line{
-    top:220px;
+    top:200px;
     width: 110px;
   }
 }

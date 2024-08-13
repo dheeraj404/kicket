@@ -59,12 +59,12 @@ background-color: rgb(37,37,37,1);
     flex-wrap: wrap;
 }
 
-.contact-image img {
-    width: 90%;
+.contact-image img{
+   width: 90%;
     height: auto;
     display: block;
     object-fit: cover;
-    aspect-ratio: 2/2.5;
+    aspect-ratio: 2/2.1;
     border-radius: 15px;
    
 }

@@ -3,8 +3,8 @@
   color: #ffffff;
   font-family: 'Avenir LT Std', sans-serif;
   position: relative;
- padding-bottom: 35px;
- 
+ padding-bottom: 15px;
+margin-top: 5rem;
 }
 
 .footer-logo {
@@ -26,7 +26,8 @@
 }
 
 .footer_first_div p {
-  width: 80%;
+  width: 60%;
+  font-size: 17px !important;
 }
 
 .social-icons {

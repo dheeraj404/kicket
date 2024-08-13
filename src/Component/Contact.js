@@ -58,7 +58,7 @@ const Contact = () => {
     
 
     const contactImageStyle = {
-        width: '100%',
+   
         display:'flex',
         
         borderRadius: '10px',
