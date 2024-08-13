@@ -89,6 +89,9 @@ function Home() {
           </header>
         </div>
       </div>
+      <div className="why_kicket_compo_bg">
+            <img src="/bg.png"/>
+          </div>
       <div className="without_first">
         <div className="why_kicket_compo">
           <div className="why_kicket_compo_heading">
@@ -102,6 +105,7 @@ function Home() {
           <div className="why_kicket_compo_button">
             <button onClick={handleButtonClick}>Know more</button>
           </div>
+         
         </div>
         <HomeService />
         <ServicesSnippets />

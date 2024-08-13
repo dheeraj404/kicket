@@ -121,6 +121,7 @@
 @media (max-width: 575.98px) {
   .footer_main_div {
     flex-direction: column;
+    padding-bottom: 30px;
   }
 
   .footer_first_div,

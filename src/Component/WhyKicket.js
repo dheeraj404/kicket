@@ -11,6 +11,8 @@ const WhyKicket = () => {
   const [carouselData, setCarouselData] = useState([]);
   const [aboutData, setAboutData] = useState(null);
 
+  const baseURL = 'https://kicketapi.webprismits.us/assets/about/';
+
   useEffect(() => {
     axios.get('https://kicketapi.webprismits.us/api/selling-points')
       .then(response => {
@@ -31,13 +33,12 @@ const WhyKicket = () => {
     axios.get('https://kicketapi.webprismits.us/api/about-content')
       .then(response => {
         setAboutData(response.data);
+        console.log(response.data[0].image)
       })
       .catch(error => {
         console.error('Error fetching about data:', error);
       });
   }, []);
-
- 
 
   return (
     <div className='Whykicket'>
@@ -49,13 +50,13 @@ const WhyKicket = () => {
           <div className="Whykicket_flex-container">
             <div className="image-container">
               <img
-                src={aboutData[0].image}
+                src={`${baseURL}${aboutData[0].image}`}
                 alt="Description"
                 className="img-fluid custom-img"
               />
             </div>
             <div className="text-container">
-              <h2>{aboutData[0].title}</h2>
+              <h2 style={{fontWeight:'750'}}>{aboutData[0].title}</h2>
               <p>{aboutData[0].description}</p>
             </div>
           </div>

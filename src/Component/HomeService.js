@@ -33,6 +33,9 @@ const HomeService = () => {
 
   return (
     <div className="HomeService">
+      <div >
+        <h1 style={{fontWeight:'bold'}}>Our Services</h1>
+      </div>
       <div className="first_div">
         <div className="image_gradint">
           <div className="responsive-img-container">
@@ -60,7 +63,9 @@ const HomeService = () => {
           </div>
         </div>
       </div>
-
+<div className="HomeService_bg">
+  <img src="/back_service.png"/>
+</div>
       <div className="second_div">
         <div className="second_div_image_gradint">
           <div className="responsive-img-container">

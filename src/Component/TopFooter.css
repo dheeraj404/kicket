@@ -45,9 +45,9 @@
   transition: background 0.3s ease;
   width: 40%;
 }
-.text_button button:hover{
+/* .text_button button:hover{
   background: linear-gradient(90deg, #feb47b, #ff7e5f);
-}
+} */
 .left_line {
   width: 155px;
   position: relative; /* Change to absolute positioning */
@@ -81,6 +81,9 @@
   .text_button h1{
     font-size: .8rem;
   }
+  .phone_img{
+    left: -10px;
+  }
 
 }
 
@@ -98,6 +101,9 @@
   }
   .text_button h1{
     font-size: .9rem;
+  }
+  .phone_img{
+    left: -30px;
   }
 
 }
@@ -128,6 +134,9 @@
   }
   .right_line{
     top:170px;
+  }
+  .phone_img{
+    left: -50px;
   }
 }
 

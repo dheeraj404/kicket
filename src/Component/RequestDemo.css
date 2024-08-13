@@ -94,9 +94,9 @@
     box-sizing: border-box;
     
   }
-  .submit-button:hover{
+  /* .submit-button:hover{
     background: linear-gradient(90deg, #feb47b, #ff7e5f) !important;
-  }
+  } */
   .center{
     display: flex;
     justify-content: center;

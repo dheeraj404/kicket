@@ -78,7 +78,7 @@ const Contact = () => {
             </div>
             <div className='Contact_second'>
        
-                <div className="contact-content">
+                <div className="contact-content" style={{paddingBottom:'40px'}}>
                     <div className="contact-image">
                         <img src={`${process.env.PUBLIC_URL}/con1.png`} alt="Contact" style={contactImageStyle} />
                     </div>
