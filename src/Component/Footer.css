@@ -95,6 +95,7 @@
   opacity: 0.3;
   display: block;
   z-index: -1;
+  overflow-y: hidden;
   pointer-events: none; /* Allows links to be clickable while image is visible */
 }
 /* General link styles in the footer */

@@ -59,7 +59,7 @@ function Home() {
     justifyContent: "center",
     alignItems: "center",
     marginTop: "5.5rem",
-    transform: 'scale(1.15)'
+    // transform: 'scale(1.15)'
   };
 
   const backImageStyle = {
