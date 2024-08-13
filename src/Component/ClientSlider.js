@@ -68,7 +68,7 @@ const ClientSlider = () => {
         {clients.map((client) => (
           <div className="client-logo-container" key={client.id}>
             <img
-              src={client.logo}
+              src={`https://kicketapi.webprismits.us/assets/clients/${client.logo}`}
               alt={`Client ${client.id}`}
               className="client-logo"
             />

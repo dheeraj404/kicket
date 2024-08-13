@@ -5,6 +5,7 @@ import './SimpleCarousel.css';
 const SimpleCarousel = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
   function getSlidesToShow() {
     if (window.innerWidth >= 1024) return 3; // Laptops and larger screens
     if (window.innerWidth >= 600) return 2; // Tablets
@@ -44,34 +45,31 @@ const SimpleCarousel = ({ testimonials }) => {
 
   return (
     <div className='SimpleCarousel'>
-    <div className='carousel-container_head'>
-    <h1>Client Testimonials</h1>
-  </div>
-    <div className="carousel-container">
-     
-      <button className="carousel-button prev-button" onClick={prevSlide}>
-        &#10094; {/* Unicode for left arrow */}
-      </button>
-     
-      <div className="carousel-slides">
-        {visibleSlides.map((testimonial, index) => (
-            
-          <TestimonialCard
-          name={testimonial.name}
-            image={testimonial.image}
-           
-            rating={testimonial.rating}
-            message={testimonial.message}
-          
-          />
-        ))}
+      <div className='carousel-container_head'>
+        <h1>Client Testimonials</h1>
       </div>
-      <button className="carousel-button next-button" onClick={nextSlide}>
-        &#10095; {/* Unicode for right arrow */}
-      </button>
-    </div>
+      <div className="carousel-container">
+        <button className="carousel-button prev-button" onClick={prevSlide}>
+          &#10094; {/* Unicode for left arrow */}
+        </button>
+        <div className="carousel-slides">
+          {visibleSlides.map((testimonial, index) => (
+            <TestimonialCard
+              key={index} // Ensure each card has a unique key
+              name={testimonial.name}
+              image={`https://kicketapi.webprismits.us/assets/testimonials/${testimonial.image}`} // Updated image URL
+              rating={testimonial.rating}
+              message={testimonial.message}
+            />
+          ))}
+        </div>
+        <button className="carousel-button next-button" onClick={nextSlide}>
+          &#10095; {/* Unicode for right arrow */}
+        </button>
+      </div>
     </div>
   );
 };
 
 export default SimpleCarousel;
+

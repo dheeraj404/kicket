@@ -55,6 +55,8 @@ padding: 20px;
   height: auto;
   display: block;
   object-fit: cover;
+  aspect-ratio: 2/2.5;
+  border-radius: 15px;
 }
 .gradint_fam_1{
   display: flex;
@@ -107,12 +109,15 @@ padding: 20px;
 }
 .number {
   position: absolute;
-  font-size: 30rem;
+  font-size: 20rem;
   color: transparent;
   -webkit-text-stroke: 1px white;
   text-stroke: 10px white;
   opacity: 0.3;
   pointer-events: none;
+  font-stretch: expanded;
+  transform: scale(1.7);
+  
 }
 
 .first_div_content {
@@ -163,13 +168,14 @@ padding: 20px;
 }
 .second_number {
   position: absolute;
-  font-size: 25rem;
+  font-size: 20rem;
   pointer-events: none;
   color: transparent;
   -webkit-text-stroke: 1px white;
   text-stroke: 3px white;
   opacity: 0.3;
  left: 40%;
+ transform: scale(1.7);
 }
 .left_button button{ background: linear-gradient(
   to right,

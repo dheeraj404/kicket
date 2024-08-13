@@ -1,45 +1,41 @@
- .ResponsiveCarousel{
-width: 100%;
- }
-.ResponsiveCarousel_head{
-
-margin-top: 1rem;
-}
- /* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-    /* Styles for extra small devices */
-    .ResponsiveCarousel{
-        width: 90%;
-         }
-        
-}
-
-/* Small devices (phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /* Styles for small devices */
-    .ResponsiveCarousel{
-        width: 88%;
-         }
-        
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    /* Styles for medium devices */ .ResponsiveCarousel{
-width: 86%;
-}
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .ResponsiveCarousel{
-        width: 83%;
-         }
-        
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-   
-}
+.ResponsiveCarousel {
+    width: 100%;
+  }
+  
+  .ResponsiveCarousel_head {
+    margin-top: 1rem;
+  }
+  
+  /* Extra small devices (phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .ResponsiveCarousel {
+      width: 90%;
+    }
+  }
+  
+  /* Small devices (phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .ResponsiveCarousel {
+      width: 88%;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .ResponsiveCarousel {
+      width: 86%;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .ResponsiveCarousel {
+      width: 83%;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* Additional styles if needed */
+  }
+  

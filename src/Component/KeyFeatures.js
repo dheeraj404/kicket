@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import './KeyFeatures.css';
 
 const KeyFeatures = ({ data }) => {
+  const baseURL = "https://kicketapi.webprismits.us/assets/services/";
+
   return (
     <div className="KeyFeatures">
       <img src="/back.png" className="background-image" alt="Background" />
@@ -21,7 +23,7 @@ const KeyFeatures = ({ data }) => {
           </Col>
           <Col xs={12} md={4} className="box_col">
             <div className="box">
-              <img src={data[0]?.image} alt={data[0]?.title} />
+              <img src={`${baseURL}${data[0]?.image}`} alt={data[0]?.title} />
             </div>
           </Col>
           <Col xs={12} md={4} className="service_col">
@@ -39,7 +41,7 @@ const KeyFeatures = ({ data }) => {
         <Row className="bottom_div">
           <Col xs={12} md={4} className="box_col">
             <div className="box">
-              <img src={data[1]?.image} alt={data[1]?.title} />
+              <img src={`${baseURL}${data[1]?.image}`} alt={data[1]?.title} />
             </div>
           </Col>
           <Col xs={12} md={4} className="service_col">
@@ -54,7 +56,7 @@ const KeyFeatures = ({ data }) => {
           </Col>
           <Col xs={12} md={4} className="box_col">
             <div className="box">
-              <img src={data[1]?.image} alt={data[1]?.title} />
+              <img src={`${baseURL}${data[1]?.image}`} alt={data[1]?.title} />
             </div>
           </Col>
         </Row>

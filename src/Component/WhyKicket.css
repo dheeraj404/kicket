@@ -1,13 +1,43 @@
 .Whykicket {
   background-color: rgba(37, 37, 37, 1);
 }
-.Whykicket_second{
-  padding: 80px;
+.contact-background_why{
+  position: relative;
+  background-image: url('/public/image9.png'); /* Main image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; /* Position the image more towards the top */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-background_why::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10rem; /* The height of the fade effect */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1));
+  pointer-events: none; /* Prevents interaction with the pseudo-element */
+}
+.contact-background_why h1{
+  color: rgba(255, 192, 25, 1);
+  font-weight: bold;
+  font-size: 3rem;
+}
+.Whykicket_second {
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .Whykicket_flex-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .text_button h1 {
@@ -16,7 +46,7 @@
 
 .custom-img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .text-container {
@@ -39,29 +69,39 @@
 .why-choose-us-container {
   background: rgba(37, 37, 37, 1);
   border-radius: 10px;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
 }
+.image-container_2 {
 
-.image-container {
-  width: 50%; /* 50% width for image */
+ width: 50%;
+}
+.image-container_2 img{
+  aspect-ratio: 2/2.5;
+width: 90%;
+border-radius: 15px;
+  
 }
 
 .text-container {
-  width: 50%; /* 50% width for text */
-
+  flex: 1;
+  min-width: 300px; /* Minimum width for responsive design */
+  width: 50%; /* 50% width for text on large screens */
 }
 
 .image-container img {
-  width: 80%;
+  width: 100%;
+  height: auto;
   aspect-ratio: 2/2.5;
   object-fit: cover;
- 
 }
 
 .custom-img2 {
-  width: 20%;
+  width: 100%;
   height: auto;
-  aspect-ratio: 3 / 3; /* Ensures the 4:3 aspect ratio */
+  aspect-ratio: 3 / 3; /* Ensures the 3:3 aspect ratio */
   object-fit: cover; /* Ensures the image covers the container */
 }
 
@@ -73,78 +113,65 @@
 @media (max-width: 575.98px) {
   .Whykicket_flex-container {
     flex-direction: column !important;
-    
   }
-  .Whykicket_second{
+  .Whykicket_second {
     padding: 10px;
   }
   .contact-background {
     height: 70vh !important;
   }
-  
   .why-choose-us-container {
     flex-direction: column;
   }
-  .image-container_2 img {
+  .image-container img {
     width: 100% !important;
+    aspect-ratio: 2/2.5;
+    object-fit: cover;
   }
+  .image-container_2 {
 
-.image-container img {
-  width: 90%;
-  aspect-ratio: 2/2.5;
-  object-fit: cover;
- 
+    width: 100%;
+   }
+   .image-container_2 img{
 
-}
-.image-container{
-  width: 100%; /* 50% width for image */
-}
-.text-container {
-  width: 100%; /* 50% width for text */
-
-}
-
+    width: 100%;
+   }
+  .image-container, .text-container {
+    width: 100%; /* Full width for smaller screens */
+  }
 }
 
 /* Small devices (phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .Whykicket_second{
+  .Whykicket_second {
     padding: 30px;
-  }
-  .flex-container {
-    padding: 0px;
   }
   .contact-background {
     height: 80vh !important;
   }
   .image-container img {
     width: 80%;
-    height: 90%;
+    height: auto;
   }
   .image-container_2 img {
     width: 100% !important;
   }
   .Whykicket_flex-container {
     flex-direction: column !important;
-    
   }
-  .image-container{
-    width: 100%; /* 50% width for image */
-  }
-  .text-container {
-    width: 100%; /* 50% width for text */
-  
+  .image-container, .text-container {
+    width: 100%; /* Full width for smaller screens */
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .Whykicket_second{
+  .Whykicket_second {
     padding: 50px;
   }
   .custom-img img {
     width: 80%;
-    height: 80%;
+    height: auto;
   }
   .image-container_2 img {
     width: 100% !important;
@@ -153,8 +180,7 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* Styles for large devices */
-  .Whykicket_second{
+  .Whykicket_second {
     padding: 70px;
   }
 }

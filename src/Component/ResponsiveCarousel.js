@@ -6,17 +6,18 @@ import ResponsiveCard from './ ResponsiveCard';
 import './ResponsiveCarousel.css';
 
 const ResponsiveCarousel = ({ data }) => {
+  // Adjust settings if there's only one item
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: data.length > 1,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: data.length > 1 ? 2 : 1, // Show only one slide if there's only one item
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: data.length > 1 ? 2 : 1,
         }
       },
       {
@@ -31,12 +32,12 @@ const ResponsiveCarousel = ({ data }) => {
   return (
     <div style={{ padding: '6%' }}>
       <div><h1 style={{ color: 'white' }} className='ResponsiveCarousel_head'>Success Stories</h1></div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Slider {...settings} style={{ width: '100%' }} className='ResponsiveCarousel'>
+      <div className='ResponsiveCarousel'>
+        <Slider {...settings} style={{ width: '100%' }}>
           {data.map((item, index) => (
             <div key={item.id}>
               <ResponsiveCard
-                image={item.image}
+                image={`https://kicketapi.webprismits.us/assets/stories/${item.image}`}
                 tagLine={item.title}
                 text={item.description}
               />

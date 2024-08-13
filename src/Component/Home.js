@@ -59,7 +59,7 @@ function Home() {
     justifyContent: "center",
     alignItems: "center",
     marginTop: "5.5rem",
-    transform:'scale(1.15)'
+    transform: 'scale(1.15)'
   };
 
   const backImageStyle = {
@@ -89,30 +89,35 @@ function Home() {
           </header>
         </div>
       </div>
-<div className="without_first"> 
-      <div className="why_kicket_compo">
-      
-        <div className="why_kicket_compo_heading">
-          <h1>
-            Why <span>Kicket</span>
-          </h1>
+      <div className="without_first">
+        <div className="why_kicket_compo">
+          <div className="why_kicket_compo_heading">
+            <h1>
+              Why <span>KICKET</span>
+            </h1>
+          </div>
+          <div className="why_kicket_compo_para">
+            <p>{homeContent}</p>
+          </div>
+          <div className="why_kicket_compo_button">
+            <button onClick={handleButtonClick}>Know more</button>
+          </div>
         </div>
-        <div className="why_kicket_compo_para">
-          <p>{homeContent}</p>
-        </div>
-        <div className="why_kicket_compo_button">
-          <button onClick={handleButtonClick}>Know more</button>
-        </div>
-      
-      </div>
-      <HomeService />
-      <ServicesSnippets />
-      <div className="testimonials_client">
-        <SimpleCarousel testimonials={testimonials} />
-        <ClientSlider />
-      </div>
-      <TopFooter /> 
-      <Footer />
+        <HomeService />
+        <ServicesSnippets />
+        
+        {/* Conditionally render testimonials section */}
+       
+          <div className="testimonials_client">
+          {testimonials.length > 0 && (
+            <SimpleCarousel testimonials={testimonials} />
+          )}
+            <ClientSlider />
+          </div>
+       
+        
+        <TopFooter />
+        <Footer />
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const CarouselComponent = () => {
               <div className="carousel-image">
                 <img
                   className="d-block w-100"
-                  src={item.image}
+                  src={`https://kicketapi.webprismits.us/assets/snippets/${item.image}`}
                   alt={`Slide ${index + 1}`}
                 />
               </div>

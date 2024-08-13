@@ -40,9 +40,6 @@
 }
 
 /* Change the color of the text on hover */
-.navbar-brand:hover h1 {
-  color: #FFD700; /* Change to gold color or any color of your choice */
-}
 
 body {
   font-family: 'Avenir LT Std', sans-serif;

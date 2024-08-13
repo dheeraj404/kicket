@@ -13,10 +13,18 @@ const Service = () => {
   const [carouselData, setCarouselData] = useState([]);
   const [keyFeaturesData, setKeyFeaturesData] = useState([]);
   useEffect(() => {
-    axios.get('http://kicketapi.webprismits.us/api/services/1/success-stories')
+    axios.get('http://kicketapi.webprismits.us/api/service/1')
+      .then(response => {
+      
+        setKeyFeaturesData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching carousel data:', error);
+      });
+      axios.get('http://kicketapi.webprismits.us/api/services/1/success-stories')
       .then(response => {
         setCarouselData(response.data);
-        setKeyFeaturesData(response.data);
+        
       })
       .catch(error => {
         console.error('Error fetching carousel data:', error);
@@ -32,19 +40,7 @@ const Service = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const data = [
-    {
-      image: '/pngwing.png',
-      title: 'Dolor It',
-      text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum.',
-    },
-    {
-      image: 'https://via.placeholder.com/300x500',
-      title: 'Another Service',
-      text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    },
-    // Add more items as needed
-  ];
+ 
 
   return (
     <div className="serivce">
@@ -55,7 +51,7 @@ const Service = () => {
 <div className="Services_second">
       <div className="flex-container">
       <Row className="align-items-center justify-space-around">
-        <Col xs={14} md={8} className="image-container">
+        <Col xs={14} md={8} className="image-container_service">
           <img
             src="/service.png"
             alt="Description"

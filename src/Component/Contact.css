@@ -3,7 +3,9 @@
 background-color: rgb(37,37,37,1);
 }
 .Contact_second{
-  padding: 80px;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  padding-bottom: 0px !important;
 }
 
 .contact-background h1 {
@@ -13,51 +15,66 @@ background-color: rgb(37,37,37,1);
     font-size: 3rem;
 }
 
-.contact-background {
-        backgroundImage: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1)), url(/public/contect.jpeg);
-         background-size: cover;
-        background-repeat: no-repeat;
-        background-Position: top;
-        color: #fff;
+.contact_background {
+    position: relative;
+    background-image: url('/public/Riyadhpi.png'); /* Main image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; /* Position the image more towards the top */
+    
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
- 
+    
+
 }
 
-.contact-container {
+.contact_background::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15rem; /* The height of the fade effect */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(37, 37, 37, 1));
+    pointer-events: none; /* Prevents interaction with the pseudo-element */
+}
+.contact_background h1{
+    color: rgba(255, 192, 25, 1);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+
+
+
+
+.contact-content{
     display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-    background-color: rgba(37, 37, 37, 1);
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 1000px;
-}
-
 .contact-image img {
-   
-    max-width: 464px;
+    max-width: 90%;
     height: auto;
-    border-radius: 10px;
-   
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 2/2.5;
+    border-radius: 15px;
+   max-height: 590px;
 }
 
 .contact-form {
-    padding: 20px;
+ 
     border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px 0;
+ width: 100%;
+    
+padding-left: 20px;
 }
 
 .contact-form h2 {
@@ -80,7 +97,7 @@ background-color: rgb(37,37,37,1);
 }
 
 .contact-form textarea {
-    height: 5rem;
+    height: 10rem;
 }
 
 .contact-form input::placeholder,

@@ -11,7 +11,7 @@
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  height: 60vh;
+ 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border: 1px solid rgba(255, 255, 255, 0.4); /* Border for glass effect */
   margin-bottom: 20px;
@@ -29,9 +29,9 @@
  background-position: center;
   z-index: 1;
   /* Blur effect for the background image */
-  transform: scale(1.1); /* Slightly scale the image for a better effect */
-  opacity: .26;
-  transform: rotateX('180');
+  transform: scale(); /* Slightly scale the image for a better effect */
+  opacity: .4;
+  transform: rotateX('270');
   
 }
 
@@ -44,6 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
  
 }
 
@@ -51,18 +52,21 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
+  aspect-ratio: 2/2.5;
+  padding: 40px;
 }
 
 .carousel-content {
 
   flex: 2;
-  padding-left: 20px;
+  padding-left: 40px;
   color: white;
 }
 
 .carousel-heading {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
+  
 }
 
 .carousel-text {

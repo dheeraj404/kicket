@@ -2,6 +2,8 @@ import React from "react";
 import "./KeyFeatures_Mobile.css";
 
 const KeyFeatures_Mobile = ({ data }) => {
+  const baseURL = "https://kicketapi.webprismits.us/assets/services/";
+
   return (
     <div className="KeyFeatures_Mobile">
       <div className="right_heading">
@@ -10,7 +12,7 @@ const KeyFeatures_Mobile = ({ data }) => {
 
       <div className="KeyFeatures_Mobile_top_div">
         <div className="key_image">
-          <img src={data[0]?.image} alt={data[0]?.title} />
+          <img src={`${baseURL}${data[0]?.image}`} alt={data[0]?.title} />
         </div>
         <div className="number_line">
           <div>
@@ -30,7 +32,7 @@ const KeyFeatures_Mobile = ({ data }) => {
       <div className="KeyFeatures_Mobile_mid_div">
         <div className="key_image">
           <img
-            src={data[1]?.image}
+            src={`${baseURL}${data[1]?.image}`}
             alt={data[1]?.title}
             style={{ width: "80%", marginLeft: "2rem" }}
           />
@@ -52,7 +54,7 @@ const KeyFeatures_Mobile = ({ data }) => {
 
       <div className="KeyFeatures_Mobile_top_div">
         <div className="key_image">
-          <img src={data[2]?.image} alt={data[2]?.title} />
+          <img src={`${baseURL}${data[2]?.image}`} alt={data[2]?.title} />
         </div>
         <div className="number_line">
           <div>

@@ -37,7 +37,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-brand" onClick={navigateHome} style={{ cursor: 'pointer' }}>
           <img src="/kicket-logo.svg" alt="Kicket" className="logo" />
-          <h1>Kicket</h1>
+          <h1>KICKET</h1>
         </div>
         <div>
           <button className="hamburger" onClick={toggleMenu}>
@@ -46,7 +46,7 @@ function Navbar() {
         </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`} onClick={closeMenu}>
           <li><NavLink to="/" end activeClassName="active">Home</NavLink></li>
-          <li><NavLink to="/why-kicket" activeClassName="active">Why Kicket</NavLink></li>
+          <li><NavLink to="/why-kicket" activeClassName="active">Why KICKET</NavLink></li>
           <li><NavLink to="/services1" activeClassName="active">Services 1</NavLink></li>
           <li><NavLink to="/services2" activeClassName="active">Services 2</NavLink></li>
           <li><NavLink to="/contact" activeClassName="active">Contact</NavLink></li>

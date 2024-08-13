@@ -31,8 +31,9 @@ const TestimonialCard = ({  name,image,message, rating }) => {
       <div className="card-header">
         <img src={image} alt="Profile" className="profile-img" />
         <div className="name-rating">
-          <h3 className="name">{name}</h3>
+        
           <div className="stars">{renderStars()}</div>
+          <h3 className="name">{name}</h3>
         </div>
       </div>
       <div className="card-body">

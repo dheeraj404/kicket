@@ -1,68 +1,85 @@
 .testimonial-card {
-    border: 2px solid rgba(255, 255, 255, 0.15); /* Adding a border */
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 500px;
-    margin: auto;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: transparent; /* Remove background color */
-    color: #ffffff; /* Text color for better visibility */
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Adding a border */
+  padding: 15px;
+  border-radius: 15px;
+  width: 300px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  margin: auto;
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between header and body */
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start (left) */
+  margin-bottom: 10px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.name-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  margin: 0;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stars {
+  display: flex;
+  margin-top: 5px;
+}
+
+.star {
+  font-size: 14px;
+}
+
+.card-body {
+  font-size: 12px;
+  line-height: 1.4;
+  overflow: hidden; /* Hide overflow to avoid scrollbars */
+  max-height: 150px; /* Limit height to fit 30 words */
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+      width: 250px; /* Adjusted fixed width for smaller screens */
+      height: 220px; /* Adjusted fixed height for smaller screens */
+      padding: 10px;
   }
-  
-  .card-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
+
   .profile-img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
   }
-  
-  .name-rating {
-    text-align: left;
-  }
-  
+
   .name {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .stars {
-    color: #ffba00;
-  }
-  
-  .star {
-    font-size: 18px;
-  }
-  
-  .card-body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  @media (max-width: 600px) {
-    .testimonial-card {
-      padding: 15px;
-    }
-  
-    .profile-img {
-      width: 50px;
-      height: 50px;
-    }
-  
-    .name {
-      font-size: 16px;
-    }
-  
-    .card-body {
       font-size: 12px;
-    }
   }
-  
+
+  .card-body {
+      font-size: 10px;
+      max-height: 120px; /* Adjusted max height for smaller screens */
+  }
+}

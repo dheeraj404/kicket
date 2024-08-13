@@ -58,10 +58,10 @@ const Contact = () => {
     
 
     const contactImageStyle = {
-        width: '90%',
+        width: '100%',
         display:'flex',
         
-        borderRadius: '30px',
+        borderRadius: '10px',
     };
 
     const formContainerStyle = {
@@ -73,11 +73,11 @@ const Contact = () => {
 
     return (
         <section className="contact-section">
-            <div className="contact-background">
+            <div className="contact_background">
                 <h1>Contact</h1>
             </div>
             <div className='Contact_second'>
-            <div className="contact-container">
+       
                 <div className="contact-content">
                     <div className="contact-image">
                         <img src={`${process.env.PUBLIC_URL}/con1.png`} alt="Contact" style={contactImageStyle} />
@@ -113,7 +113,7 @@ const Contact = () => {
                             </div>
                         )}
                     </div>
-                </div>
+              
             </div>
             <TopFooter />
             <Footer />

@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
           <div className="footer_second_div">
             <div className="footer_links">
-              <h5 className="mb-3">Account Link</h5>
+              <h4 className="mb-3" >Account Link</h4>
               <ul className="list-unstyled" style={{}}>
                 <li>
                   <Link to="/" className="text-light">
@@ -100,16 +100,17 @@ const Footer = () => {
           </div>
          
         </div>
-        <div>
-          <p style={{ textAlign: "center" }}>
-            &copy; Kicket | All Rights Reserved | Designed By Web Prism
-            Dynamics
-          </p>
-        </div>
+      
       </div>
       <div className="footer_last_image">
             <img src="/design.png" alt="Design" />
           </div>
+          <div className="last_moto">
+          <p>
+            &copy; Kicket | All Rights Reserved | Designed By Web Prism
+            Dynamics
+          </p>
+        </div>
     </footer>
   );
 };
