@@ -21,14 +21,21 @@ const Service = () => {
       .catch(error => {
         console.error('Error fetching carousel data:', error);
       });
-      axios.get('http://kicketapi.webprismits.us/api/services/1/success-stories')
-      .then(response => {
-        setCarouselData(response.data);
-        
-      })
-      .catch(error => {
-        console.error('Error fetching carousel data:', error);
-      });
+     axios.get('http://kicketapi.webprismits.us/api/services/1/success-stories')
+  .then(response => {
+    // Map through each item in the response data and prepend the base URL to the image path
+    const updatedData = response.data.map(item => {
+      if (item.image) {
+        return { ...item, image: `https://kicketapi.webprismits.us/assets/stories/${item.image}` };
+      }
+      return item;
+    });
+    setCarouselData(updatedData);
+  })
+  .catch(error => {
+    console.error('Error fetching carousel data:', error);
+  });
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 875.98);
     };

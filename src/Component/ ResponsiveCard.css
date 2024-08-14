@@ -1,20 +1,51 @@
-.card {
-  background-color: rgba(37, 37, 37, 1);
+.ResponsiveCard-container {
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
   color: white;
-  border: none;
+  text-align: center;
+  background-color: rgba(37, 37, 37, 1);
+  margin: 20px;
   box-sizing: border-box;
-  width: 100%;
-  margin: 0 auto;
+  min-height: 750px;
 }
 
-.card img {
+.ResponsiveCard-imageContainer {
+  position: relative;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+
+.ResponsiveCard-image {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  aspect-ratio: 2.4/2;
 }
 
-.card_text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  word-wrap: break-word;
+.ResponsiveCard-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
+.ResponsiveCard-content {
+  padding: 20px;
+}
+
+.ResponsiveCard-title {
+  font-family: 'Avenir LT Std', sans-serif;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.ResponsiveCard-text {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
 }

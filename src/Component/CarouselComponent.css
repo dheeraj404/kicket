@@ -1,0 +1,33 @@
+.slider-container {
+    max-width: 1200px; /* Maximum width of the slider */
+    min-height: 800px; /* Center the slider horizontally */
+    overflow: hidden; /* Ensures no overflow from the slider */
+  }
+  
+  .carousel-item {
+    position: relative;
+    padding: 10px; /* Optional: adds space inside each slide */
+  }
+  
+  .carousel-image {
+    width: 100%; /* Makes the image responsive within the container */
+    aspect-ratio: 2.3/2; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+  }
+  
+  .text-overlay {
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    color: white;
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .slick-slide {
+      text-align: center;
+    }
+    .carousel-image {
+      height: 200px; /* Smaller height for mobile devices */
+    }
+  }
+  

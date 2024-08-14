@@ -37,7 +37,7 @@ const ResponsiveCarousel = ({ data }) => {
           {data.map((item, index) => (
             <div key={item.id}>
               <ResponsiveCard
-                image={`https://kicketapi.webprismits.us/assets/stories/${item.image}`}
+                image={item.image}
                 tagLine={item.title}
                 text={item.description}
               />
